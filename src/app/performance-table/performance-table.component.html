@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <mat-tab-group dynamicHeight>
+        <mat-tab label="Categories">
+            Categories
+        </mat-tab>
+        <mat-tab label="Manufacurers">
+            Manufacurers
+        </mat-tab>
+        <mat-tab label="Models">
+            Models
+        </mat-tab>
+        <mat-tab label="SubSystems">
+            SubSystems
+        </mat-tab>
+        <mat-tab label="Configuratoins">
+            Configuratoins
+        </mat-tab>
+        <mat-tab label="Performance Table">
+
+            <div style="float: left; width: 100%;padding-top: 20px;">
+                <span class="title">Full Load Torque Curve - Performance Table</span>
+                <span style="float: right;">
+                    <button mat-icon-button color="accent" class="mlr-5">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                    <mat-slide-toggle class="mlr-5">Enable</mat-slide-toggle>
+
+                    <button mat-raised-button class="btn-1 mlr-5"><i class="fa fa-line-chart"></i>Pilot</button>
+                    <button mat-raised-button class="btn-2">Cancel</button>
+
+                </span>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-12">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Full Load Torque Curve</mat-label>
+                        <input matInput placeholder="Placeholder">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-8">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-12">
+                    <table class="bg-w">
+                        <tr>
+                            <th>Ideal Output</th>
+                            <th>Contributing Factor(s)</th>
+                            <th>
+                                <mat-icon class="blue">add_circle</mat-icon>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Engine Torque<br> <i>(Nm)</i></th>
+                            <th>
+                                <div>
+                                    <mat-form-field appearance="outline" style="max-width: 400px;">
+                                        <mat-label>Engine RPM</mat-label>
+                                        <mat-select>
+                                            <mat-option value="option">RPM</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <p><i>(RPM)</i></p>
+                                </div>
+                            </th>
+                            <th>Action</th>
+                        </tr>
+                        <tr *ngFor="let data of dataTable">
+                            <td>{{data.engine_torque}}</td>
+                            <td>{{data.engine_rpm}}</td>
+                            <td>
+                                <mat-icon class="blue mlr-5">edit</mat-icon>
+                                <mat-icon class="red mlr-5">delete</mat-icon>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

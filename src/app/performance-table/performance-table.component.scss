@@ -1,0 +1,50 @@
+.title{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.mlr-5{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.btn-1{
+    color: white;
+    background: #6ab10b;
+    .fa{
+        padding-right: 10px;
+    }
+}
+.btn-2{
+    color: white;
+    background: black;
+}
+.mat-form-field{
+    width: 100%;
+}
+table{
+        border-spacing: 5px;
+        border-collapse: separate;
+        width: 100%;
+    
+    tr{
+        td{
+            text-align: center;
+            padding: 10px;
+            border: 1px solid lightgray;
+            .red{
+                color: red;
+            }
+            
+        }
+        th{
+            text-align: center;
+            padding: 10px;
+            border: 1px solid lightgray;
+        }
+    }
+}
+.blue{
+    color: blue;
+}
+.bg-w{
+    background: white;
+}
